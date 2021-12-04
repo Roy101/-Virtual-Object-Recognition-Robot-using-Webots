@@ -1,0 +1,56 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.8291314778629044 0.542667550056171 0.13436116452647076 0.5309397945591809
+  position 6.093243570514301 9.087886691688002 18.526659754955734
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+  luminosity 0
+}
+Chair {
+  translation -0.54 0 1.58
+}
+Panel {
+  translation -0.1 0 -1.76
+}
+Panel {
+  translation -3.3 0 -1.76
+  name "panel(1)"
+}
+Panel {
+  translation -1.68 0 -1.76
+  name "panel(2)"
+}
+Panel {
+  translation -3.3 1.36662e-08 -1.13
+  rotation -2.6427199999813914e-06 0.9999999999929585 -2.6644099999812388e-06 -1.5707953071795862
+  name "panel(3)"
+}
+Panel {
+  translation -3.3 4.62066e-08 0.37
+  rotation -2.6331299999815925e-06 0.9999999999930094 -2.654819999981441e-06 -1.5707953071795862
+  name "panel(4)"
+}
+Panel {
+  translation -3.3 7.7878e-08 1.83
+  rotation -2.6331299999815925e-06 0.9999999999930094 -2.654819999981441e-06 -1.5707953071795862
+  name "panel(5)"
+}
+Pioneer2 {
+  translation 0.909739 -0.01 0.513241
+  rotation 0 1 0 -0.261795307179586
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 5
+  location 0 1.2 0
+  radius 5
+  castShadows TRUE
+}
+Floor {
+}

@@ -1,0 +1,217 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.9410274123871099 0.3381601346997808 0.010729978371200098 6.050682602186946
+  position -0.9349100611240688 3.274466016490988 11.27324531159197
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+}
+DEF FLoor Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0.556863 0 0
+    }
+  }
+  geometry Box {
+    size 5 0.1 5
+  }
+}
+DirectionalLight {
+  direction 0 -1 0
+  castShadows TRUE
+}
+DEF wall2 Solid {
+  translation 0 0 2.56
+  children [
+    DEF wall2 Shape {
+      appearance Appearance {
+        material Material {
+          ambientIntensity 0.3
+          diffuseColor 0.8 0.501961 0.501961
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall2
+}
+DEF wall1 Solid {
+  translation 2.45 0 0.05
+  rotation 0 1 0 1.5708
+  children [
+    DEF wall1 Shape {
+      appearance Appearance {
+        material Material {
+          ambientIntensity 0.3
+          diffuseColor 0.8 0.501961 0.501961
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall1
+}
+DEF wall3 Solid {
+  translation -2.45 0 0.0500171
+  rotation 0 1 0 1.5708
+  children [
+    DEF wall3 Shape {
+      appearance Appearance {
+        material Material {
+          ambientIntensity 0.3
+          diffuseColor 0.8 0.501961 0.501961
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall3
+}
+DEF wall4 Solid {
+  translation 0 0 -2.46
+  children [
+    DEF wall4 Shape {
+      appearance Appearance {
+        material Material {
+          ambientIntensity 0.3
+          diffuseColor 0.8 0.501961 0.501961
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall4
+}
+DEF Cylinder Solid {
+  translation 0.15 0.79 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.235294 0.8 0.14902
+        }
+      }
+      geometry DEF Cylinder Cylinder {
+        height 1.5
+        radius 0.26
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 1.5
+    radius 0.26
+  }
+}
+DEF Sphere Solid {
+  translation -1.21 0.27 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.235294 0.8 0.14902
+        }
+      }
+      geometry Sphere {
+        radius 0.3
+        subdivision 3
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.3
+    subdivision 5
+  }
+}
+DEF Cone Solid {
+  translation 1.18 0.3 0.28
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.219608 0.337255 1
+        }
+      }
+      geometry Cone {
+        bottomRadius 0.19
+        height 0.5
+      }
+    }
+  ]
+  boundingObject Group {
+    children [
+      Transform {
+        translation 0 -0.12 0
+        children [
+          Cylinder {
+            height 0.23
+            radius 0.2
+          }
+        ]
+      }
+      Transform {
+        translation 0 0.07 0
+        children [
+          Cylinder {
+            height 0.34
+            radius 0.15
+          }
+        ]
+      }
+    ]
+  }
+}
+DEF Wheel Solid {
+  translation 0.236142 -0.55999 2.00608
+  rotation -0.9999999999960385 2.3595499999906527e-06 1.5347199999939202e-06 1.5708
+  children [
+    DEF wheel1 Transform {
+      translation 0 0.68 0.77
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Cylinder {
+            height 1
+            radius 0.1
+          }
+        }
+      ]
+    }
+    DEF wheel2 Transform {
+      translation 0 0.15 0.77
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Cylinder {
+            height 0.5
+            radius 0.3
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject Group {
+    children [
+      USE wheel2
+      USE wheel1
+    ]
+  }
+}
